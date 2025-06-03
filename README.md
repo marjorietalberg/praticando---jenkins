@@ -80,6 +80,7 @@ ip a
 ```
 
  <img src="https://github.com/user-attachments/assets/48fa648f-b961-4c50-bb52-acc59109fe9b" alt="Descrição da imagem" style="max-width:100%; height:auto;">
+ <img src="https://github.com/user-attachments/assets/7a40bde2-f2e1-4c0f-910d-ac142baeee57" alt="Imagem" />
 
 ---
 
