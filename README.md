@@ -29,3 +29,64 @@ O Jenkins está sendo executado de forma local, diretamente no Ubuntu, podendo s
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+## 2️⃣ Instalar o Java (requisito do Jenkins):
+```bash
+sudo apt update && sudo apt install openjdk-17-jdk -y
+```
+## 3️⃣ Adicionar a chave do Jenkins e instalar:
+```bash
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+```
+
+## 4️⃣ Adicione o repositório do Jenkins à lista de fontes do apt:
+```bash
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+```
+
+## 5️⃣ Atualize a lista de pacotes e instale o Jenkins:
+```bash
+sudo apt-get update && sudo apt-get install -y jenkins
+```
+
+## 6️⃣ Chave de Segurança
+Para obter a senha inicial de administrador do Jenkins, execute o comando:
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+## 7️⃣ Iniciar e habilitar o serviço Jenkins:
+
+```bash
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+
+```
+
+## 🌐 Acessando o Jenkins Localmente
+🔗 O Jenkins, por padrão, roda na porta 8080. Para acessar, você pode usar:
+
+Se estiver na mesma máquina:
+```bash
+http://localhost:8080
+```
+ou se quiser  Descobrir o IP Público do servidor
+```bash
+curl -4 ifconfig.me
+```
+Descobrir o IP Local (na rede local)
+```bash
+ip a
+```
+---
+
+# 📌 Observações 
+
+## Liberar portas necessárias
+Se não estava liberado, rodou:
+```bash
+sudo ufw allow 8080
+sudo ufw allow 80
+sudo ufw allow 443
+sudo ufw reload
+```
