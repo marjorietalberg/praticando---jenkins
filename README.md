@@ -78,6 +78,9 @@ Descobrir o IP Local (na rede local)
 ```bash
 ip a
 ```
+
+ <img src="https://github.com/user-attachments/assets/48fa648f-b961-4c50-bb52-acc59109fe9b" alt="Descrição da imagem" style="max-width:100%; height:auto;">
+
 ---
 
 # 📌 Observações 
